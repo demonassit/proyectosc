@@ -109,3 +109,7 @@ void menu(void){
 
 
 //metodo mostrar
+
+void mostrar(void){
+    
+}
