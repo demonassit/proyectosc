@@ -214,3 +214,24 @@ void borrar(void){
         getch();
     }
 }
+
+void guardar(void){
+
+    //archivo 
+    FILE *arch;
+    arch = fopen("Datos-a.txt", "w");
+    if(!i){
+        cout<<"\n No hay lista para guardar";
+        getch();
+        return;
+    }
+    p = i;
+    while(p){
+        fprintf(arch, "%i\n",p->i);
+        p = p->s;
+
+    }
+    cout<<"\n Archivo guardado";
+    fclose(arch);
+    getch();
+}
