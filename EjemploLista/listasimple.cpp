@@ -197,3 +197,20 @@ void insertar(int dat){
         e->s = p;
     }
 }
+
+void borrar(void){
+    cout<<"\n Ingresa el dato que deseas eliminar: ";   //23
+    cin>>da;
+    if(buscar(da)){
+
+        if(a)
+            a->s = p->s;   //asignar el nodo donde esta el dato
+        else
+            i = p->s;    //que obtenga el valor del nodo
+        delete(p);
+        cout<<"\n Dato eliminado";
+    }else{
+        cout<<"\n Dato no se encuentra T_T";
+        getch();
+    }
+}
