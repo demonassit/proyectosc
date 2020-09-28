@@ -130,3 +130,70 @@ void mostrar(void){
     cout<<"\n Fin de la lista";
     getch();
 }
+
+int buscar(int d){
+
+    if(!i){
+        cout<<"\n No hay datos en la lista";
+        getch();
+        return(0);
+    }
+
+    //cuando si hay
+    p=i;
+    a = NULL;
+    while(p->s && p->i<d){
+        //recorrer los valores de la lista
+        a=p;
+        p=p->s;
+
+    }
+    return(p->i==d?1:0);
+
+}
+
+void insertar(int dat){
+
+    if(!i){
+        //creando un nuevo nodo para asignar el dato
+        //aqui es cuando se ingresa el primer valor
+        i = new(dato);
+        i->s = NULL;
+        i->i = dat;
+        return; 
+    }
+    if(buscar(dat)){
+        //inserto 1
+        //insertar 1
+        cout<<"\n El Dato Existe";
+        getch();
+        return;
+    }
+    //ahora inserte el 2
+    //si tuvieramos varios valores en la lista    
+    //  nodo3 = -4     nodo2= a==-3       nodo1 = 1    nnod4 = 2      nodo2= a==3 nod5= 23 NULL    ......
+    e = new(dato);
+    e->i=dat;
+    if(p==i && p->s){
+        if(p->i < e->i){
+            p->s = e;
+            e->s = NULL;
+        }else{
+            e->s = p;
+            i=e;
+        }
+        return;
+    }
+    if(p->s){
+        a->s = e;
+        e->s = p;
+        return;
+    }
+    if(e->i > p->i){
+        e->s = NULL;
+        p->s = e;
+    }else{
+        a->s = e;
+        e->s = p;
+    }
+}
