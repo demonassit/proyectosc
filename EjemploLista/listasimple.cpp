@@ -111,5 +111,22 @@ void menu(void){
 //metodo mostrar
 
 void mostrar(void){
-    
+    int cont = 1;
+    if(!i){
+        cout<<"No hay lista para mostrar";
+        getch();
+        return;
+    }
+    p=i;
+    cout<<endl<<endl;
+    while(p){
+        //como si existe la lista empezamos a recorrer los elementos o datos de la lista
+        cout<<cont++<<"\n Valor = "<<p->i<<endl;
+        // operador ->   es un apuntador de asignacion  
+        // = es un operador para asignar un valor   a = 4
+        // == es un operador de equivalencia    a == b
+        p=p->s;
+    }
+    cout<<"\n Fin de la lista";
+    getch();
 }
