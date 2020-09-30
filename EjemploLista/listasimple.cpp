@@ -235,3 +235,26 @@ void guardar(void){
     fclose(arch);
     getch();
 }
+
+
+void cargar(void){
+
+    int c, x;
+    FILE *arch;
+    arch = fopen("Datos-a.txt", "r");
+    if(!arch){
+        cout<<"\n No existe el archivo";
+        getch();
+        return;
+    }
+    do{
+        c = fscanf(arch, "%i\n", &x);
+        if(c!= EOF){
+            insertar(x);
+        }
+    }while(c!=EOF);
+    cout<<"\nArchivo cargado";
+    fclose(arch);
+    getch();
+
+}
