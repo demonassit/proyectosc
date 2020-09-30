@@ -28,8 +28,8 @@ void insertar(int dat);
 void mostrar(void);
 void borrar(void);
 void menu(void);
-void guardar(void);
-void cargar(void);
+//void guardar(void);
+//void cargar(void);
 
 
 //principal
@@ -92,10 +92,10 @@ void menu(void){
             borrar();
             break;
         case 5:
-            guardar();
+            //guardar();
             break;
         case 6:
-            cargar();
+            //cargar();
             break;
         
         default:
@@ -214,7 +214,7 @@ void borrar(void){
         getch();
     }
 }
-
+/*
 void guardar(void){
 
     //archivo 
@@ -256,5 +256,6 @@ void cargar(void){
     cout<<"\nArchivo cargado";
     fclose(arch);
     getch();
+*/
 
-}
+
