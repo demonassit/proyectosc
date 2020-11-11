@@ -47,7 +47,7 @@ struct cpm{
 };
 
 
-vector<Node>ayd[MAX]; //lista de adyacencia acorde al tamaÃ±o definido de memoria
+vector<Node>ayd[MAX]; //lista de adyacencia acorde al tamaño definido de memoria
 
 int distancia[MAX];  //distancia entre el vertice inicial al siguiente
 
