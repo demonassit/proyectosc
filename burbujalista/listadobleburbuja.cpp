@@ -53,6 +53,22 @@ void modificar(TLista &, int, int);
 
 int main(){
 
+    TLista lista = NULL;
+    int opc, valor, pos;
+    //elementos que se repita
+    do{
+        //aqui debe de estar el menu del programa
+
+        switch(opc){
+            case 1:
+
+            case 2: 
+
+            //correspondiente con el menu
+        }
+
+    }while(opc!=numero de casos);
+
 }
 
 
@@ -120,5 +136,40 @@ void eliminarElemento(TLista & lista, int valor){
         ant->q;
         q=q->sgte;
         
+    }
+}
+
+void modificar(TLista &lista, int v, int pos){
+    TLista q, stge;
+    q = lista;
+
+    int i;
+
+    for(i = 0; i<pos-1&&q->sgte!=NULL; i++){
+        q = q->sgte;
+        q->nro = v;
+    }
+}
+
+
+void burbuja(TLista lista){
+    TLista actual, siguiente, marca;
+    int i;
+    marca = NULL;
+    while(marca!=lista->sgte){
+        actual=lista;
+        siguiente=actual->sgte;
+        //recorrer todos los elementos
+        while(siguiente!=marca){
+            //la comparacion para el ordenamiento
+            if(actual->nro > siguiente->nro){
+                i = siguiente->nro;
+                siguiente->nro = actual->nro;
+                actual->nro = i;
+            }
+            actual = actual->sgte;
+            siguiente = actual->sgte;
+        }
+        marca=actual;
     }
 }
