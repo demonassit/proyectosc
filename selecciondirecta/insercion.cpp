@@ -26,7 +26,7 @@ int main(){
 	//ordenamiento
 	for(i=1; i<10; i++){
 		j = i;
-		while(j>=0 && arreglo[j]<arreglo[j-1]){
+		while(j>=0 && arreglo[j]arreglo[j-1]){
 			k=arreglo[j];
 			arreglo[j] = arreglo[j-1];
 			arreglo[j-1] = k;
